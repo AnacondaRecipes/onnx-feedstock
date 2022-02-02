@@ -23,6 +23,7 @@ requirements:
     - cmake
     - make
     - libprotobuf
+    - pybind11
   host:
     - python
     - cython  # [osx and arm64]
@@ -36,7 +37,7 @@ requirements:
     - wheel
   run:
     - python
-    - protobuf >=3.16.0
+    - protobuf
     - {{ pin_compatible('numpy') }}
     - six
     - typing-extensions >=3.6.2.1
