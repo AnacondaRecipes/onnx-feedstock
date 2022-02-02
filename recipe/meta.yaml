@@ -27,6 +27,7 @@ requirements:
   host:
     - python
     - cython  # [osx and arm64]
+    - libprotobuf
     - ninja
     - numpy
     - pip
