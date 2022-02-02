@@ -25,17 +25,17 @@ requirements:
     - libprotobuf
   host:
     - python
+    - ninja
+    - numpy
     - pip
     - protobuf
-    - pytest-runner
-    - ninja
     - pybind11
-    - numpy
+    - pytest-runner
     - setuptools
     - wheel
   run:
     - python
-    - protobuf >=3.12.2
+    - protobuf >=3.16.0
     - {{ pin_compatible('numpy') }}
     - six
     - typing-extensions >=3.6.2.1
