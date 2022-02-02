@@ -27,7 +27,6 @@ requirements:
     - python
     - pip
     - protobuf
-    - libprotobuf
     - pytest-runner
     - ninja
     - pybind11
