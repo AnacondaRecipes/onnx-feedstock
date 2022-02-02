@@ -36,7 +36,7 @@ requirements:
     - wheel
   run:
     - python
-    - protobuf >= 3.12.2
+    - protobuf >=3.12.2
     - {{ pin_compatible('numpy') }}
     - six
     - typing-extensions >=3.6.2.1

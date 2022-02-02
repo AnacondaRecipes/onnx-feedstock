@@ -1,0 +1,1205 @@
+commit 424e2ecad2c0d9af2a6288d0cb66786ebdde4075
+Author: Serhii Kupriienko <skupriienko@anaconda.com>
+Date:   Wed Feb 2 11:15:37 2022 +0000
+
+    Update dependencies
+
+commit 8faab85579f313a2ee0cfef3caf272d6ec518273
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Dec 17 03:29:09 2021 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeGHAWithMain
+
+commit 32b0fdf7a71cae5307847ae8511b7ccbe579b4ac
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Wed Dec 15 15:16:44 2021 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeGHAWithMain
+
+commit d4942262ec4be9fb68d1f211535951dc1f202676
+Merge: 70ea6a6 3f6595d
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Tue Dec 14 08:08:12 2021 +0100
+
+    Merge pull request #72 from regro-cf-autotick-bot/rebuild-libprotobuf319-0-1_h77e0ca
+    
+    Rebuild for libprotobuf319
+
+commit 3f6595d8a75ac859786136167bd95729fbe46a87
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Dec 11 16:43:27 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.7, conda-smithy 3.15.1, and conda-forge-pinning 2021.12.11.13.14.30
+
+commit 2aee09e596f9ab23f2741b27bc832396215a6143
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Dec 11 16:43:00 2021 +0000
+
+    Rebuild for libprotobuf319
+
+commit 70ea6a6c8db9d408e254fbbd82e2101cf60702d9
+Merge: 9df9138 b4f05ed
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Sat Dec 11 14:16:43 2021 +0000
+
+    Rebuild for python310
+    
+    automerged PR by conda-forge/automerge-action
+
+commit b4f05ed4c16623c055f6ed954026d5ebc1249639
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Sat Dec 11 14:18:41 2021 +0100
+
+    Update meta.yaml
+
+commit 920929438f4ad73c18b401cdb9159c9b60c534cf
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Dec 10 02:57:57 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.7, conda-smithy 3.15.1, and conda-forge-pinning 2021.12.09.14.59.11
+
+commit cf2ea97de7dd5a854e118b6a2cb60ba5c0db32ed
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Dec 10 02:57:21 2021 +0000
+
+    Rebuild for python310
+
+commit 9df91381af60b866df0c205d00c1a6123690eba3
+Merge: 7b218b1 f41e99c
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Sun Oct 24 17:37:18 2021 +0200
+
+    Merge pull request #67 from regro-cf-autotick-bot/1.10.2_h1adcda
+
+commit f41e99c246dd9194414776a74ea19cf4a8726889
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Oct 24 14:24:15 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.13.0, and conda-forge-pinning 2021.10.22.20.56.07
+
+commit 84e1561367ef6b81dc1c9dcd9d51bfbcbefe9839
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Oct 24 14:23:47 2021 +0000
+
+    updated v1.10.2
+
+commit 7b218b1dd3015c25c0b1d67151067ca67dcccddb
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Sun Oct 24 14:35:40 2021 +0200
+
+    Update conda-forge.yml
+
+commit 09e4aac903afd9d05598619a3b4e34e83547b9a8
+Merge: 14a964a cd91f16
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Sun Sep 26 20:31:31 2021 +0200
+
+    Merge pull request #65 from regro-cf-autotick-bot/rebuild-pypy37-windows-0-1_h6981bd
+    
+    Rebuild for PyPy3.7 for windows
+
+commit cd91f16a865ecee958662362451b594b8567dbeb
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Sep 17 19:18:34 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.12, and conda-forge-pinning 2021.09.17.05.51.46
+
+commit ac78ff681df4c640c938056899e35fa90795194c
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Sep 17 19:17:52 2021 +0000
+
+    Rebuild for PyPy3.7 for windows
+
+commit 14a964a588ecb561ccd0148adb9dccab39bc76e6
+Merge: b872567 6f41caa
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Fri Sep 17 20:29:13 2021 +0200
+
+    Merge pull request #64 from regro-cf-autotick-bot/rebuild-libprotobuf318-0-1_h1087b4
+    
+    Rebuild for libprotobuf318
+
+commit 6f41caa92c83f1da84f23c61c0342b7d36104e33
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Fri Sep 17 16:44:35 2021 +0200
+
+    Update meta.yaml
+
+commit a1d3c11d39adccb1197b58efc109c772b8a796dd
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Sep 17 11:56:02 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.12, and conda-forge-pinning 2021.09.17.05.51.46
+
+commit 6b48746536c56103c2004f6bac656d2b7a2cd9b3
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Sep 17 11:55:25 2021 +0000
+
+    Rebuild for libprotobuf318
+
+commit b87256760817748c01ee654bd33a0c6a7e7c6a4d
+Merge: 0b0a0f8 025cb6d
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Tue Aug 3 16:45:57 2021 +0200
+
+    Merge pull request #63 from regro-cf-autotick-bot/1.10.1_h9974c0
+    
+    onnx v1.10.1
+
+commit 025cb6d0c1d30240acac8610d6dbf0825390d5a0
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Aug 3 11:21:06 2021 +0000
+
+    updated v1.10.1
+
+commit 0b0a0f896b8c932f8875170ece1d92fb541fbc98
+Merge: 647763b 9f8d985
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Tue Aug 3 09:54:17 2021 +0200
+
+    Merge pull request #62 from regro-cf-autotick-bot/1.10.0_h50893e
+    
+    onnx v1.10.0
+
+commit 9f8d985f57c188032780d4f030a88db71feebce1
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Jul 31 04:10:22 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.11.0, and conda-forge-pinning 2021.07.30.11.17.02
+
+commit ee72e29d0d84a70a5546c1bb28188365413bd905
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Jul 31 04:10:06 2021 +0000
+
+    updated v1.10.0
+
+commit 647763bafe7b882300d893a677937a4b71ca70bf
+Merge: 96e76df ef70536
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Sat May 8 09:05:41 2021 +0200
+
+    Merge pull request #61 from regro-cf-autotick-bot/rebuild-libprotobuf316-0-1_ha2edfc
+
+commit ef705367d7dde61074f87e2ce7bf18e97530d40c
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri May 7 19:53:39 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.1, and conda-forge-pinning 2021.05.07.14.12.29
+
+commit d930e77cb9f3ccaaca19528863d940ced2d7357d
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri May 7 19:53:27 2021 +0000
+
+    Rebuild for libprotobuf316
+
+commit 96e76df3dbdde04b5d66790920737ab0e04c7bed
+Merge: 8f77f4d a35396e
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Mon Apr 19 14:49:01 2021 +0000
+
+    onnx v1.9.0
+    
+    automerged PR by conda-forge/automerge-action
+
+commit a35396e6a2f0953774fc99f67a89624f7562bf07
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Mon Apr 19 15:14:34 2021 +0200
+
+    Update meta.yaml
+
+commit 99a796cd7c1c09f49d75530ca68fe0bdbc568ddb
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Mon Apr 19 15:14:01 2021 +0200
+
+    Update meta.yaml
+
+commit 7bd50966aea36b66ad09dbd84bf2ebb3fe01f9c7
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Apr 19 12:30:05 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.0, and conda-forge-pinning 2021.04.17.14.54.41
+
+commit 437881fc372db6145d2fee424f9bdc3699e99472
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Apr 19 12:29:54 2021 +0000
+
+    updated v1.9.0
+
+commit 8f77f4da944e15c212510db8ed595cc9703151a3
+Merge: c3b373b 4b7682c
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Mon Mar 22 08:21:48 2021 +0100
+
+    Merge pull request #59 from isuruf/protobuf
+    
+    Set Protobuf_LIBRARY to fix cross
+
+commit 4b7682c97da112eeae425029f69159bc8a53ed20
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Mar 21 22:28:30 2021 -0500
+
+    Fix typo
+
+commit 4b0635b4eb1e822e577a3cddfd0c15583368e76b
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Mar 21 22:18:49 2021 -0500
+
+    Set Protobuf_LIBRARY to fix cross
+
+commit c3b373be005ca509fd13b04b929c365ac057b0c5
+Merge: 0be78b8 8c79c14
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Thu Mar 11 15:29:56 2021 +0000
+
+    Arch Migrator
+    
+    automerged PR by conda-forge/automerge-action
+
+commit 8c79c14f8ae689e919a10f22343a1ee61da8f473
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Thu Mar 11 15:35:59 2021 +0100
+
+    Switch ppc64le to emulation
+
+commit f85503b8c98fb2cc751e3c4c526c3a57c8ea2f9b
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Thu Mar 11 14:51:19 2021 +0100
+
+    Add make
+
+commit 3e611fb5290b6fed9a46f2f5175dc1b8f684c62e
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Mar 11 13:03:12 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.9.0, and conda-forge-pinning 2021.03.11.12.19.54
+
+commit a1ff4922d068adb0f434a9308fb775b5d493ff4a
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Mar 11 13:03:00 2021 +0000
+
+    migration: ArchRebuild
+
+commit 0be78b8fe7c93adeab838ba5e268faaac9362aee
+Merge: 55db8ad fc5099d
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Thu Mar 11 10:54:34 2021 +0000
+
+    ARM OSX Migrator
+    
+    automerged PR by conda-forge/automerge-action
+
+commit fc5099df1510448662caa609d53cc788b2eb9813
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Thu Mar 11 11:30:07 2021 +0100
+
+    Add @xhochy as a maintainer
+
+commit e852c8b9847e63de92ea4c6c4b1a4a17f396f904
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Thu Mar 11 11:13:46 2021 +0100
+
+    Use protoc from BUILD
+
+commit dea2e6a529875272a179a10b1023450dbfe1acf9
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Mar 11 09:47:40 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.9.0, and conda-forge-pinning 2021.03.11.09.17.26
+
+commit ca44c6aca32c33e30adf2c96b1e033168970dd3e
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Mar 11 09:47:31 2021 +0000
+
+    migration: OSXArm
+
+commit 55db8ad10661b8d49a50502764f34351459d98e5
+Merge: 8763938 f07e552
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Thu Feb 25 20:26:44 2021 +0100
+
+    Merge pull request #54 from regro-cf-autotick-bot/rebuild-libprotobuf315-0-1_h2b2def
+    
+    Rebuild for libprotobuf315
+
+commit f07e552a5841cc3638b6cb8321f5d5f808244b75
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Feb 21 01:42:21 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.8.6, and conda-forge-pinning 2021.02.20.20.42.23
+
+commit 2ae412af97f4d05ac9c87ce16d910934f0234d3a
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Feb 21 01:42:11 2021 +0000
+
+    Rebuild for libprotobuf315
+
+commit 8763938074b928d2718043707f07500f4c3ee602
+Merge: e079183 714d910
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Wed Feb 3 20:44:53 2021 +0000
+
+    Merge pull request #53 from regro-cf-autotick-bot/1.8.1_h4074db
+    
+    onnx v1.8.1
+
+commit 714d9103c72163aacf64479fc2c99d1b57d53166
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Jan 30 02:26:15 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.8.6, and conda-forge-pinning 2021.01.29.20.41.28
+
+commit aa59244fd6a26529ec28e77c6dda9b338e4ae2f6
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Jan 30 02:26:03 2021 +0000
+
+    updated v1.8.1
+
+commit e0791832bfde0cf439630d6f621627ac0be7491d
+Merge: 58119d5 941f45d
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Wed Jan 13 07:12:26 2021 +0000
+
+    Merge pull request #52 from regro-cf-autotick-bot/rebuild-pypy37-0-1_h2a7555
+    
+    Rebuild for pypy37
+
+commit 941f45d10ab1870a9ae8ca7de66b91a345496a08
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Jan 13 03:56:27 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.3, conda-smithy 3.8.6, and conda-forge-pinning 2021.01.13.00.13.23
+
+commit d579f8f190358871c56b2a6cffc397b7e89fb7e8
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Jan 13 03:56:16 2021 +0000
+
+    Rebuild for pypy37
+
+commit 58119d5c1728ba2d6bc28afe272392065824815b
+Merge: 1134d52 259d157
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Mon Jan 11 17:42:10 2021 +0100
+
+    Merge pull request #51 from regro-cf-autotick-bot/rebuild-libprotobuf314-0-1_h68e2ef
+    
+    Rebuild for libprotobuf314
+
+commit 259d15753018408f609d115e50b7bafa4bbaef81
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Dec 4 11:44:29 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.5, conda-smithy 3.8.5, and conda-forge-pinning 2020.12.04.08.17.45
+
+commit 653384dcbafec4161d1f03929dc54b128398c067
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Dec 4 11:44:17 2020 +0000
+
+    Rebuild for libprotobuf314
+
+commit 1134d52a053efde130898c0410349b63591a04a5
+Merge: bbbe8b7 977ad4c
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Tue Nov 10 10:42:46 2020 +0000
+
+    Update onnx 1.8.0
+    
+    automerged PR by conda-forge/automerge-action
+
+commit 977ad4cd8ee31c89919ed98e6020d83b0742d842
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Tue Nov 10 10:18:03 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.5, conda-smithy 3.8.5, and conda-forge-pinning 2020.11.08.20.44.44
+
+commit 6be453a3a238883022a81b5e9a113254fbbfc139
+Merge: 4dad4c2 bbbe8b7
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Mon Nov 9 10:34:21 2020 -0800
+
+    Merge branch 'master' into onnx1.8
+
+commit 4dad4c2851e05847492b1a30b8dd909598a07991
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Mon Nov 9 10:22:16 2020 -0800
+
+    use #build==0
+
+commit 4acbe5fb256e90948268de4e896f1f355aa06277
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Mon Nov 9 10:19:40 2020 -0800
+
+    update onnx 1.8.0
+
+commit bbbe8b7b7dffe72be3cfcc855736a58704c23fa3
+Merge: 17dc37a 3379190
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Oct 12 15:28:43 2020 +0100
+
+    Merge pull request #49 from regro-cf-autotick-bot/rebuild-python39-0-2_hede798
+    
+    Rebuild for python39
+
+commit 33791901c0fbfa1797bbdced5c263f8858e8640c
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Oct 12 12:18:30 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.3, conda-smithy 3.8.1, and conda-forge-pinning 2020.10.12.09.51.03
+
+commit 0b5301be2d7e68bac66556a02139c6846ff316b7
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Oct 12 12:18:18 2020 +0000
+
+    Rebuild for python39
+
+commit 17dc37ac708aaabe2da6b7727da6030eaad45181
+Merge: 451b2cf 69ee9ba
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Sep 14 09:53:07 2020 +0100
+
+    Merge pull request #47 from jcwchen/onnx1.7.0-win
+    
+    Enable onnx conda package for Windows
+
+commit 69ee9ba25ac330ffb4b622a55ee8494e461702c3
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sun Sep 13 12:45:04 2020 +0100
+
+    Update build.sh
+
+commit 80be671f25f942630128d97b57973112cb1148ab
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sun Sep 13 12:44:35 2020 +0100
+
+    Create bld.bat
+
+commit a6e183c86f026d5d9f36c69c26f9cc5ee334226c
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sun Sep 13 12:42:53 2020 +0100
+
+    Create build.sh
+
+commit e322f63b875eec9a554eaf5c3924c01003c73d66
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sun Sep 13 12:41:44 2020 +0100
+
+    revert
+
+commit 5e485a0a5ff8939644d060cd0b0d1512e51bd7c1
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sun Sep 13 12:41:28 2020 +0100
+
+    add build.sh
+
+commit 8e0c976598785fcf70090b6057f18b4c9c8f1fa3
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sun Sep 13 12:41:05 2020 +0100
+
+    Remove scripts
+
+commit 54361bf67c7be432f162ed257399b57e1ca9f790
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Sat Sep 12 17:50:10 2020 -0700
+
+    --no-use-pep517
+
+commit ae661e1243389d8f7164da3ffdd20f034f2514ab
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Sat Sep 12 17:02:55 2020 -0700
+
+    use shared protobuf
+
+commit 250dfda76c3fd86931525a45c50bccdaa43e68c1
+Merge: 1fa40c5 d76fa8c
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Sat Sep 12 16:23:08 2020 -0700
+
+    use MSVC 2019
+
+commit 1fa40c582f532731046b64112c645979522b8a85
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Sat Sep 12 16:19:01 2020 -0700
+
+    add cmake generator
+
+commit d76fa8c3e6ad4b6ab2ebca42a2549f3d22f8fa2a
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Sat Sep 12 15:15:08 2020 -0700
+
+    Update recipe/meta.yaml
+    
+    Co-authored-by: Clouds <Clouds.Flowing@gmail.com>
+
+commit 31a0f0347746d36fec616ba0979c43ee11c5d7e4
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Fri Sep 11 13:34:18 2020 +0100
+
+    Update meta.yaml
+
+commit ac14c1af5fda87bacaa100b297b8e86011fe40bf
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Fri Sep 11 07:06:22 2020 +0100
+
+    Update meta.yaml
+
+commit ff79b2fe6699a3fd10e61c2549434153307618c0
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Fri Sep 11 06:40:30 2020 +0100
+
+    Update meta.yaml
+
+commit 215bab1954f79700790cc00d2de4c71eeda930d7
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Thu Sep 10 22:27:46 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.2, conda-smithy 3.7.10, and conda-forge-pinning 2020.09.10.13.34.01
+
+commit 7dcd52a376c6e466cb6955dff31f56397ee0a6a7
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Thu Sep 10 15:25:10 2020 -0700
+
+    not skip for Windows
+
+commit 2a5507d75bd936481d3db35d39465b61cb6deff6
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Thu Sep 10 21:34:16 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.2, conda-smithy 3.7.10, and conda-forge-pinning 2020.09.10.13.34.01
+
+commit 2cfa2bbc295922d65b27e3e2cb5477190da0a1ea
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Thu Sep 10 14:31:12 2020 -0700
+
+    remove generated files
+
+commit efc7f02e79815db19abc8cfc7310fed233078d10
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Thu Sep 10 11:50:33 2020 -0700
+
+    use the right version of windows2019
+
+commit e52ff99adb6cac9101471b6c251fce031104fc97
+Author: Chun-Wei Chen <jacky82226@gmail.com>
+Date:   Thu Sep 10 11:29:50 2020 -0700
+
+    test python 3.7 with vs2019
+
+commit 451b2cf93e8bc98ab537f9f5b24578d30aa066fe
+Merge: 57f396b 88d0245
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Tue Sep 8 21:20:41 2020 +0200
+
+    Merge pull request #46 from regro-cf-autotick-bot/rebuild-libprotobuf313-0-1_h329c93
+    
+    Rebuild for libprotobuf313
+
+commit 88d0245118768cb532b4ea4cc77b6ee9815d0384
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Tue Sep 8 17:01:52 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.1, conda-smithy 3.7.10, and conda-forge-pinning 2020.09.08.14.30.05
+
+commit 96df9f82dc6412ce38d466593077ee622d6c53d1
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Tue Sep 8 17:01:38 2020 +0000
+
+    Rebuild for libprotobuf313
+
+commit 57f396b2b082ba1c122f61198efb0b65f8013c4c
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat Aug 8 10:11:49 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit f6e0a5a27e026dddeb230b8643e917368ec69e01
+Merge: b5258ca d791973
+Author: Matthew R Becker <beckermr@users.noreply.github.com>
+Date:   Wed Jun 3 06:25:42 2020 -0500
+
+    Merge pull request #43 from regro-cf-autotick-bot/rebuild-libprotobuf312-0-1_h84f2ec
+    
+    Rebuild for libprotobuf312
+
+commit d7919732a439cc9b42a3d197babed888177796e3
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed May 27 18:55:32 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.3, and conda-forge-pinning 2020.05.27.14.19.32
+
+commit d938c1ee197c83b3ac9afc43281b0254e8b4261a
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed May 27 18:55:04 2020 +0000
+
+    Rebuild for libprotobuf312
+
+commit b5258caa38ada43e5757d13cbac1e92baef0b776
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Mon May 18 08:07:49 2020 -0500
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeAutomerge
+
+commit d4654d4237155043b97557cce47393e2f66d2873
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sun May 17 03:09:09 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit 06d3f3afe8467bc4ffb4af871f03a74fce0aaab3
+Merge: 42d915e de7b9dc
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 11 13:52:14 2020 +0100
+
+    Merge pull request #42 from regro-cf-autotick-bot/rebuild-pypy-0-1_h8e6de1
+    
+    Rebuild for pypy
+
+commit de7b9dc0e123b701abf1d5d7bc391d02ce326f74
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon May 11 12:41:16 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.0, and conda-forge-pinning 2020.05.11.06.13.34
+
+commit 2d4873022672d4732a7b6e5bcd823178ded3e184
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon May 11 12:40:51 2020 +0000
+
+    Rebuild for pypy
+
+commit 42d915e95680dfea149e403d2625e57190dc5002
+Merge: fe93e26 f5d6701
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 11 12:45:34 2020 +0100
+
+    Merge pull request #41 from regro-cf-autotick-bot/1.7.0_hb93825
+    
+    onnx v1.7.0
+
+commit f5d670119f2fa3e0857ed42b31a541b0a4bf3ee3
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 11 12:33:02 2020 +0100
+
+    Update meta.yaml
+
+commit 3ce748a5a4d9f429b28feb63e019451bb5d9ef74
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 11 12:27:41 2020 +0100
+
+    Delete patch-cmake.patch
+
+commit 2a8331ca620da4be67e0c4eaf0ba99137fb13e26
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 11 12:27:13 2020 +0100
+
+    Removed patch
+
+commit a63353e6b716990908852ca75941a39f285f2416
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat May 9 01:02:29 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.0, and conda-forge-pinning 2020.05.09.00.08.03
+
+commit 8a7c38ab5109e32be227984092b0e3e499c4c08b
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat May 9 01:02:03 2020 +0000
+
+    updated v1.7.0
+
+commit fe93e26caddc6f7ae10131c9d973a1b04873a4d5
+Merge: 3106ac4 402eca8
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 4 09:44:13 2020 +0100
+
+    Merge pull request #37 from marcelotrevisani/master
+    
+    Add libprotobuf
+
+commit 402eca8b775d571e065b078f0df7c7da418db3a7
+Author: Marcelo Duarte Trevisani <marceloduartetrevisani@gmail.com>
+Date:   Mon May 4 08:34:11 2020 +0100
+
+    Add patch
+
+commit 7263a46a7548ea6ff83e6f5468d9f2d5a5bd1d52
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 4 08:17:02 2020 +0100
+
+    Update meta.yaml
+
+commit a8a7380319ed7c66798516ffbfd1d9cf6050e3c5
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 4 08:14:46 2020 +0100
+
+    Update meta.yaml
+
+commit bf02a4a0a7d634159cc0a53d3ca5f1d77499c436
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Mon May 4 07:05:36 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.0, and conda-forge-pinning 2020.05.04.05.46.47
+
+commit 964d690491af5c652cd518a462b5f32c8cf4824c
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon May 4 08:02:25 2020 +0100
+
+    Add libprotobuf
+
+commit 3106ac4e4f1f3c40e5c645306c1cd7ac948bae7d
+Author: D.J. Sutherland <dougal@gmail.com>
+Date:   Sat May 2 19:10:03 2020 -0500
+
+    remove myself as maintainer  [skip ci] [ci skip]
+
+commit cfd35ff4eb81b14244c171592b67f454b3ab4d65
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Mon Mar 2 22:36:32 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit 2d1b36c4dba045f5e1a2ca5ecdf2566ea8c23cf0
+Merge: 6b05a7d 2cd064d
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Nov 4 08:18:20 2019 +0000
+
+    Merge pull request #34 from regro-cf-autotick-bot/rebuild-python3801
+    
+    Rebuild for python38
+
+commit 2cd064d2b0b2ed95abb8b723234c5af42482fbdd
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sun Nov 3 23:25:14 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.1, and conda-forge-pinning 2019.11.01
+
+commit 5fb088bec23eaf1606d23d2f2a0aabee9b1063c2
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sun Nov 3 23:24:56 2019 +0000
+
+    bump build number
+
+commit 6b05a7dfa15b90e39cecf9ccca15a145220a53a2
+Merge: 250f688 dca02e8
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Sat Sep 28 07:42:53 2019 +0100
+
+    Merge pull request #32 from regro-cf-autotick-bot/1.6.0
+    
+    onnx v1.6.0
+
+commit dca02e86d5b040b4dcd7d109bc8cf0da490d29a4
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Sep 28 02:14:49 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.8, and conda-forge-pinning 2019.09.27
+
+commit 24cd93189af39bdb523c0e532e9853356e1beeef
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Sep 28 02:14:23 2019 +0000
+
+    updated v1.6.0
+
+commit 250f6882b55436b15c7b91606541fed970bbadae
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Sep 6 19:29:32 2019 -0500
+
+    [ci skip] ***NO_CI*** Move from appveyor to azure.
+    
+    See https://github.com/conda-forge/conda-forge.github.io/issues/857
+
+commit 5ca1a105efa40e341107e33fb93c853f51b14493
+Merge: 3c09720 b3b540c
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Aug 19 15:52:06 2019 +0100
+
+    Merge pull request #28 from marcelotrevisani/master
+    
+    Update meta.yaml
+
+commit b3b540c4b4a961b5909fb1557403e403ca1481e6
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Aug 19 10:29:31 2019 +0100
+
+    Return to protobuf
+
+commit ce1758324e887cc894fa706f17ae8f9a4990b326
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Mon Aug 19 09:18:07 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.1, and conda-forge-pinning 2019.08.12
+
+commit 6610fbb5db157bb833348ab4fe30cf32b000c9a3
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Aug 19 10:11:14 2019 +0100
+
+    Change to libprotobuf
+
+commit 7c3a92c791fb4a641f5004786abe8ed3434ffde0
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Fri Aug 16 17:33:30 2019 +0100
+
+    Update meta.yaml
+
+commit 3c097202eee064921704f3bad65e9c4002d18729
+Merge: 9b3fadf a5e0503
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Mon Jul 22 09:50:28 2019 +0100
+
+    Merge pull request #27 from regro-cf-autotick-bot/rebuildlibprotobuf-3.80
+    
+    Rebuild for libprotobuf-3.8
+
+commit a5e050346ed599396286febfd2ffd55c164cb2ca
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Jun 27 16:29:03 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.6, conda-smithy 3.4.0, and conda-forge-pinning 2019.06.27
+
+commit 4dda3ae38bd73217a1fe58b96f13d52ceb0c8bfc
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Jun 27 16:28:50 2019 +0000
+
+    bump build number
+
+commit 9b3fadfc913bbddfda5481f764e6404d185c55c3
+Merge: cbdffa1 15b1fa8
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Fri May 17 22:07:38 2019 -0400
+
+    Merge pull request #26 from marcelotrevisani/master
+    
+    Update to 1.5.0
+
+commit 15b1fa8d42cd840e0bbb62843ba019f77e479554
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Thu May 9 16:41:58 2019 +0100
+
+    Reset build number
+
+commit 751f43dde9a04d9115a6dab43638223a8535e700
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu May 9 15:40:13 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.4, and conda-forge-pinning 2019.05.06
+
+commit 9263c0c8960a24ca0806eca4b3ca90da095dbc26
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Thu May 9 16:37:33 2019 +0100
+
+    Skip windows
+
+commit abe28f18ba7ba3f3d8150b30e81dc8a329fd4246
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Thu May 9 16:28:00 2019 +0100
+
+    Add pybind11
+
+commit 3126ee8fa69bd94d8d750b09210a9d42612becc2
+Author: Marcelo Duarte Trevisani <marceloduartetrevisani@gmail.com>
+Date:   Thu May 9 16:15:18 2019 +0100
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.4, and conda-forge-pinning 2019.05.06
+
+commit ec95525062c61ccf204df5a6373b07f94e8f7baf
+Author: Marcelo Duarte Trevisani <marcelotrevisani@users.noreply.github.com>
+Date:   Thu May 9 16:10:09 2019 +0100
+
+    Bump build number and removed skip for windows
+
+commit cbdffa105ab7ee56294068977e0f9c6922935aee
+Merge: 80ed886 6379bf9
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Fri Mar 15 21:58:11 2019 -0400
+
+    Merge pull request #23 from regro-cf-autotick-bot/rebuildlibprotobuf-3.703
+    
+    Rebuild for libprotobuf-3.7
+
+commit 6379bf952f320c7d75f7fa506fc1712d454b6078
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Mar 15 12:29:43 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.2.14, and conda-forge-pinning 2019.03.14
+
+commit 1148d71986976176600330f1e73f031e6a30d123
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Mar 15 12:29:30 2019 +0000
+
+    bump build number
+
+commit 80ed8864a9a0717faac63b8efa71d7555f4c5c94
+Merge: 43dcac1 3e84ea3
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Sat Feb 2 13:16:03 2019 -0500
+
+    Merge pull request #22 from regro-cf-autotick-bot/1.4.1
+    
+    onnx v1.4.1
+
+commit 3e84ea3b3a30c597a02640603f455a6e2953e1cf
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Jan 25 21:24:43 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.7, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.21
+
+commit 74570896fc82ffc5154d34256ae144b05223c1e6
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Jan 25 21:24:37 2019 +0000
+
+    updated v1.4.1
+
+commit 43dcac1447f386a3ae293a08e8a745ebe8da4a1b
+Merge: e789cef eebf71d
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Thu Jan 10 10:18:28 2019 -0500
+
+    Merge pull request #21 from xhochy/patch-1
+    
+    Rebuild for Python 3.7, GCC 7, R 3.5.1, openBLAS 0.3.2
+
+commit eebf71d9e88ae0ec05a4fd404f15b9279b0563f3
+Author: Uwe L. Korn <uwelk@xhochy.com>
+Date:   Wed Jan 9 22:05:03 2019 +0100
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2019.01.09
+
+commit adb6ad11d213819ed4b4a690782086e057427e77
+Author: Uwe L. Korn <uwelk@xhochy.com>
+Date:   Fri Jan 4 23:48:22 2019 +0100
+
+    Add typing for Python 2
+
+commit 6938ea267d13441ca14f1c0a99dc84e06fa575c2
+Author: Uwe L. Korn <uwelk@xhochy.com>
+Date:   Fri Jan 4 19:02:04 2019 +0100
+
+    Update to 1.3.0
+
+commit f05bc7c5b4f676afaa8b948fb9918a611f8807a2
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Wed Nov 21 20:23:37 2018 +0100
+
+    Fix lint
+
+commit 2725927367b25388ed83102e4a375be54d1bf712
+Author: Uwe L. Korn <xhochy@users.noreply.github.com>
+Date:   Wed Nov 21 20:15:33 2018 +0100
+
+    Fix lint issue
+
+commit ee8d4903369291b835d0c12defbe7f69b53c1d76
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Oct 13 03:57:52 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.10.11
+
+commit fc271943e23990f86070d7332da79b2912253080
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Oct 13 03:57:48 2018 +0000
+
+    bump build number
+
+commit e789cefae34fa2ff7f1b00c0b913d3c80eff1da1
+Author: Travis CI User <travis@example.org>
+Date:   Sat Aug 4 18:29:20 2018 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit c5eff7f958d234132487311f2e55ddc0e36e290d
+Merge: 9d89811 ba9c22f
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 21:33:54 2018 +0100
+
+    Merge branch 'rerender'
+
+commit ba9c22f02c7f50084df4193ba2cdaaffda9b576a
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 20:29:13 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.1.4 and pinning 2018.05.07
+
+commit dd995dc13edb078fa0dd016b5b00cc5b2621f82a
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 20:28:59 2018 +0100
+
+    temporarily disable windows
+
+commit bcfe813316e21dfb828cb377535dba15e672d5e8
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 20:03:44 2018 +0100
+
+    don't set ONNX_BINARY_BUILD
+
+commit f3c43c66b8dcb109067be4023e9f1fc256336865
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 20:01:51 2018 +0100
+
+    set ONNX_ML
+    
+    like
+    https://github.com/onnx/wheel-builder/pull/6/commits/e813d6c53318e675c600b33c8f265db7fea0bbf4
+
+commit 49c716576f9e4ceb0dcfa7734451a8db75a885e6
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 19:19:25 2018 +0100
+
+    add six as run dep
+
+commit da363349ad6341e12ebdbe19a8e1fcabac682f28
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 19:12:06 2018 +0100
+
+    pip: use --verbose
+
+commit 17a3f435f27b156577a77e29cc398ccc7cdb1540
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 19:07:20 2018 +0100
+
+    make sure build script points at the host env, not _build_env
+
+commit 5c2cc80797e7fcf6bbbafe32e5c41ef31b7913b6
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:38:05 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.1.4 and pinning 2018.05.07
+
+commit 799dc534b091c895ac0b9a484ebe8b97d9ecb74e
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:37:51 2018 +0100
+
+    need cmake for build, whoops
+
+commit 3e816264251180aef7acf947c397892fcff1e0df
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:23:02 2018 +0100
+
+    update to 1.1.2, why not
+
+commit 8d5da819ec2c9dd59ff11a04f1b2c20a906d7e6e
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:16:24 2018 +0100
+
+    fix selector
+
+commit 9d43960058355ef75057bcff3b313a81e17b0a0d
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:16:00 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.1.4 and pinning 2018.05.07
+
+commit 69b181e060d1c3f8f688011b08e311a507efa6a2
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:15:41 2018 +0100
+
+    add libprotobuf too, for pinning
+
+commit 8accbaaec5836a889988899b97180bbcd847b506
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:14:07 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.1.4 and pinning 2018.05.07
+
+commit 40a24eb572ebeb0a617882eba9c8e4257cfa62c3
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Wed May 23 18:13:44 2018 +0100
+
+    CB3 format
+
+commit 9d89811804340f9fa2b57de9c5b547dc828cfec2
+Merge: 60efb75 52effe4
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Fri Mar 23 12:20:02 2018 +0000
+
+    Merge pull request #8 from dougalsutherland/1.1.1
+    
+    update to 1.1.1
+
+commit 52effe42bc288ab9138a7c5f85fe9ab8a0d02201
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Thu Mar 22 18:47:12 2018 +0000
+
+    skip windows py2k
+
+commit 707a1ce2ba26a88c2f8bbb653508ad2105dd9b98
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Thu Mar 22 18:47:01 2018 +0000
+
+    add entry point scripts
+
+commit 7c2734d52455e0e585bc798bf627e8747225fd6e
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Thu Mar 22 18:42:29 2018 +0000
+
+    switch to pip build
+
+commit 7b08c90183fa2f4c20b88bf71d205623d576365b
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Thu Mar 22 18:42:04 2018 +0000
+
+    make sure ONNX_BINARY_BUILD actually set properly
+
+commit 2dd8b20759b0d572514615db4dfaf7afd0daa6c6
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Thu Mar 22 18:41:26 2018 +0000
+
+    LICENSE now included in sdist
+
+commit 655b3f644e39bfc9724d2afe7f93b683f54eaba9
+Author: Dougal J. Sutherland <dougal@gmail.com>
+Date:   Thu Mar 22 18:41:00 2018 +0000
+
+    1.1.1
+
+commit 60efb750650c5591999de5134bc4f532a814b4e2
+Merge: f2cad47 5830b86
+Author: jakirkham <jakirkham@gmail.com>
+Date:   Sun Mar 4 03:30:09 2018 -0500
+
+    Merge pull request #3 from jakirkham-feedstocks/refresh_pinnings
+    
+    Refresh pinnings
+
+commit 5830b86763f1f1d8cbef11872ba8bf709d07a84d
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sat Mar 3 20:59:38 2018 -0500
+
+    Bump build number to 1
+    
+    Now that pins have been refreshed, bump the build number to 1.
+
+commit b5fb00443e2b96ca55d7c8d68ac8d1b8c058f7a0
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sat Mar 3 20:58:09 2018 -0500
+
+    Refresh pinnings
+    
+    Update to the latest pinnings.
+
+commit c32bd7d7740b88112c50df6e58e119bb44b51140
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sat Mar 3 20:55:41 2018 -0500
+
+    MNT: Re-rendered with conda-smithy 2.4.5
+
+commit f2cad4705f2e94f621d09cbe09bc6bcec0a13c03
+Author: bddppq <bai@in.tum.de>
+Date:   Fri Jan 26 20:57:32 2018 -0800
+
+    Release 1.0.1 (#2)
+
+commit 93c87e388dc35c56151741481c854abaf6d41654
+Author: Edward Z. Yang <ezyang@mit.edu>
+Date:   Tue Dec 5 10:54:02 2017 -0500
+
+    Release 1.0.0 (#1)
+    
+    * Release 1.0.0
+
+commit 47b1743564f9293ddbbe4d8ffd3bfa54499d58ce
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Sat Nov 25 14:58:43 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 8fa624b65cc0d02422bc92c2146fe25082360acb
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Sat Nov 25 14:56:34 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.4.3.
