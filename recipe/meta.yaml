@@ -25,6 +25,7 @@ requirements:
     - libprotobuf
   host:
     - python
+    - cython  # [osx and arm64]
     - ninja
     - numpy
     - pip
