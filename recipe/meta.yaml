@@ -10,7 +10,7 @@ source:
   sha256: 520b3aa34272cc215e2eb41385f58adf01750d88858d4722563edca8410c5dc9
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -18,27 +18,24 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}                     
+    - {{ compiler('cxx') }}                   
     - cmake
-    - make
-    - libprotobuf
+    - make                                    # [not win]
+    - libprotobuf >=3.12.2
   host:
     - python
     - pip
-    - protobuf
-    - libprotobuf
+    - protobuf >=3.12.2
+    - libprotobuf >=3.12.2
     - pytest-runner
     - ninja
     - pybind11
-    - numpy
+    - numpy >=1.16.6
   run:
     - python
-    - protobuf
+    - protobuf >=3.12.2
+    - {{ pin_compatible('libprotobuf') }} # is this needed to match abi from build?
     - {{ pin_compatible('numpy') }}
     - six
     - typing-extensions >=3.6.2.1
