@@ -10,7 +10,7 @@ source:
   sha256: 520b3aa34272cc215e2eb41385f58adf01750d88858d4722563edca8410c5dc9
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -31,7 +31,7 @@ requirements:
     - pytest-runner
     - ninja
     - pybind11
-    - numpy >=1.16.6
+    - numpy
   run:
     - python
     - protobuf >=3.12.2
