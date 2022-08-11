@@ -16,6 +16,8 @@ build:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
     - backend-test-tools = onnx.backend.test.cmd_tools:main
+  ignore_run_exports:
+    - libprotobuf  # [win]
 
 requirements:
   build:
