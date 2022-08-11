@@ -1,5 +1,6 @@
 {% set name = "onnx" %}
-{% set version = "1.10.2" %}
+{% set version = "1.12.0" %}
+{% set sha256 = "052ad3d5dad358a33606e0fc89483f8150bb0655c99b12a43aa58b5b7f0cc507" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://github.com/onnx/onnx/archive/v{{ version }}.tar.gz
-  sha256: 520b3aa34272cc215e2eb41385f58adf01750d88858d4722563edca8410c5dc9
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -22,20 +23,22 @@ requirements:
     - {{ compiler('cxx') }}                   
     - cmake
     - make                                    # [not win]
-    - libprotobuf >=3.12.2
+    - libprotobuf
   host:
     - python
     - pip
-    - protobuf >=3.12.2
-    - libprotobuf >=3.12.2
+    - setuptools
+    - wheel
+    - protobuf
+    - libprotobuf
     - pytest-runner
     - ninja
     - pybind11
-    - numpy >=1.16.6
+    - numpy
   run:
     - python
-    - protobuf >=3.12.2
-    - {{ pin_compatible('libprotobuf') }} # is this needed to match abi from build?
+    - protobuf
+    - {{ pin_compatible('libprotobuf') }}
     - {{ pin_compatible('numpy') }}
     - six
     - typing-extensions >=3.6.2.1
@@ -53,10 +56,10 @@ test:
 
 about:
   home: https://github.com/onnx/onnx/
+  summary: Open Neural Network Exchange library
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: Open Neural Network Exchange library
   description: |
     Open Neural Network Exchange (ONNX) is the first step toward an open
     ecosystem that empowers AI developers to choose the right tools as their
@@ -64,6 +67,9 @@ about:
     defines an extensible computation graph model, as well as definitions of
     built-in operators and standard data types. Initially we focus on the
     capabilities needed for inferencing (evaluation).
+  doc_url: https://github.com/onnx/onnx/blob/main/README.md
+  doc_source_url: https://github.com/onnx/onnx
+  dev_url: https://github.com/onnx/onnx
 
 extra:
   recipe-maintainers:
