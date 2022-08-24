@@ -57,7 +57,7 @@ test:
     - backend-test-tools --help
 
 about:
-  home: https://github.com/onnx/onnx/
+  home: https://onnx.ai
   summary: Open Neural Network Exchange library
   license: MIT
   license_family: MIT
@@ -70,7 +70,7 @@ about:
     built-in operators and standard data types. Initially we focus on the
     capabilities needed for inferencing (evaluation).
   doc_url: https://github.com/onnx/onnx/blob/main/README.md
-  doc_source_url: https://github.com/onnx/onnx
+  doc_source_url: https://github.com/onnx/onnx/tree/main/docs
   dev_url: https://github.com/onnx/onnx
 
 extra:
