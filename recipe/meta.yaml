@@ -34,7 +34,6 @@ requirements:
     - protobuf
     - libprotobuf
     - pytest-runner
-    - ninja
     - pybind11
     - numpy   1.19  # [py<310]
     - numpy   1.21  # [py==310]
@@ -44,7 +43,6 @@ requirements:
     - protobuf
     - {{ pin_compatible('libprotobuf') }}
     - {{ pin_compatible('numpy') }}
-    - six
     - typing-extensions >=3.6.2.1
 
 test:
