@@ -31,8 +31,8 @@ requirements:
     - pip
     - setuptools
     - wheel
-    - protobuf 3.20.3
-    - libprotobuf 3.20.3
+    - protobuf
+    - libprotobuf
     - pytest-runner 4.4
     - pybind11 2.9.2
     - numpy   1.19  # [py<310]
