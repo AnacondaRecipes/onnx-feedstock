@@ -1,6 +1,6 @@
 {% set name = "onnx" %}
-{% set version = "1.12.0" %}
-{% set sha256 = "052ad3d5dad358a33606e0fc89483f8150bb0655c99b12a43aa58b5b7f0cc507" %}
+{% set version = "1.13.0" %}
+{% set sha256 = "66eb61fc0ff4b6189816eb8e4da52e1e6775a1c29f372cbd08b694aa5b4ca978" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
