@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -29,10 +29,10 @@ requirements:
     - pip
     - setuptools
     - wheel
+    - pybind11
     - protobuf
     - libprotobuf
     - pytest-runner 4.4
-    - pybind11 2.9.2
     - numpy   1.19  # [py<310]
     - numpy   1.21  # [py==310]
     - numpy   1.23  # [py>=311]
