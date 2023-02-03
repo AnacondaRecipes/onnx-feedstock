@@ -32,7 +32,8 @@ requirements:
     - protobuf
     - libprotobuf
     - pytest-runner 4.4
-    - pybind11 2.9.2
+    - pybind11 2.9.2   # [py<311]
+    - pybind11 2.10.1  # [py>=311]
     - numpy   1.19  # [py<310]
     - numpy   1.21  # [py==310]
     - numpy   1.23  # [py>=311]
