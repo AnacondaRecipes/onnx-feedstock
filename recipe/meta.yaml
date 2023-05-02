@@ -28,7 +28,7 @@ requirements:
     - pip
     - setuptools
     - wheel
-    - pybind11
+    - pybind11 2.10.4
     - protobuf
     - libprotobuf
     - pytest-runner 6.0.0
