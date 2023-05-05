@@ -1,17 +1,16 @@
 {% set name = "onnx" %}
-{% set version = "1.13.0" %}
-{% set sha256 = "66eb61fc0ff4b6189816eb8e4da52e1e6775a1c29f372cbd08b694aa5b4ca978" %}
+{% set version = "1.13.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/onnx/onnx/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 090d3e10ec662a98a2a72f1bf053f793efc645824f0d4b779e0ce47468a0890e
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -29,10 +28,11 @@ requirements:
     - pip
     - setuptools
     - wheel
-    - pybind11
-    - protobuf
+    - pybind11 2.10.4
+    # required >=3.20.2 but we have only 3.20.3 with python 3.11 support
+    - protobuf 3.20.3
     - libprotobuf
-    - pytest-runner 4.4
+    - pytest-runner 6.0.0
     - numpy   1.19  # [py<310]
     - numpy   1.21  # [py==310]
     - numpy   1.23  # [py>=311]
