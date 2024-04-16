@@ -59,7 +59,7 @@ about:
   summary: Open Neural Network Exchange library
   license: Apache-2.0
   license_family: Apache
-  license_file: LICENSES
+  license_file: LICENSE
   description: |
     Open Neural Network Exchange (ONNX) is the first step toward an open
     ecosystem that empowers AI developers to choose the right tools as their
