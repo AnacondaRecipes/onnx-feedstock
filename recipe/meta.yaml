@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.13.1" %}
+{% set version = "1.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 090d3e10ec662a98a2a72f1bf053f793efc645824f0d4b779e0ce47468a0890e
+  sha256: 237c6987c6c59d9f44b6136f5819af79574f8d96a760a1fa843bede11f3822f7
 
 build:
   number: 0
@@ -18,8 +18,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}                     
-    - {{ compiler('cxx') }}                   
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
     - make                                    # [not win]
     - libprotobuf
