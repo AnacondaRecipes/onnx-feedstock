@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 237c6987c6c59d9f44b6136f5819af79574f8d96a760a1fa843bede11f3822f7
 
 build:
@@ -21,21 +21,21 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make                                    # [not win]
-    - libprotobuf
+    - make          # [not win]
+    - libprotobuf {{ libprotobuf }}
   host:
     - python
     - pip
     - setuptools
     - wheel
-    - pybind11 2.10.4
+    - pybind11 2.12.0
     # required >=3.20.2 but we have only 3.20.3 with python 3.11 support
     - protobuf 3.20.3
-    - libprotobuf
+    - libprotobuf {{ libprotobuf }}
     - pytest-runner 6.0.0
-    - numpy   1.19  # [py<310]
-    - numpy   1.21  # [py==310]
-    - numpy   1.23  # [py>=311]
+    - numpy   1.21  # [py<310]
+    - numpy   1.23  # [py==310 or py==311]
+    - numpy   1.26  # [py>=312]
   run:
     - python
     - protobuf >=3.20.2,<4
