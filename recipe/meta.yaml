@@ -57,9 +57,9 @@ test:
 about:
   home: https://onnx.ai
   summary: Open Neural Network Exchange library
-  license: MIT
-  license_family: MIT
-  license_file: LICENSE
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSES/Apache-2.0.txt
   description: |
     Open Neural Network Exchange (ONNX) is the first step toward an open
     ecosystem that empowers AI developers to choose the right tools as their
