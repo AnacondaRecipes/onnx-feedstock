@@ -9,4 +9,4 @@ set CMAKE_ARGS="-DONNX_USE_PROTOBUF_SHARED_LIBS=ON -DProtobuf_USE_STATIC_LIBS=OF
 set "PYTHON_EXECUTABLE=%PYTHON%"
 set "PYTHON_LIBRARIES=%LIBRARY_LIB%"
 set USE_MSVC_STATIC_RUNTIME=0
-%PYTHON% -m pip install --no-deps --no-use-pep517 --ignore-installed --no-build-isolation --verbose .
+%PYTHON% -m pip install --no-deps --ignore-installed --no-build-isolation --verbose .
