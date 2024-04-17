@@ -1,6 +1,10 @@
 :: cmd
 echo "Building %PKG_NAME%."
 
+echo "cmake --help"
+cmake --help
+echo "cmake --version"
+cmake --version
 set "ONNX_ML=1"
 set CONDA_PREFIX=%LIBRARY_PREFIX%
 set CMAKE_GENERATOR="Visual Studio 16 2019"
