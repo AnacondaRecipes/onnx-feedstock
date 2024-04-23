@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make          # [not win]
+    - ninja-base    # [win]
     - libprotobuf {{ libprotobuf }}
   host:
     - python
