@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<38]
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
