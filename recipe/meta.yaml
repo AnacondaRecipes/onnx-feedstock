@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.13.1" %}
+{% set version = "1.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,35 +7,38 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 090d3e10ec662a98a2a72f1bf053f793efc645824f0d4b779e0ce47468a0890e
+  sha256: 0ce153e26ce2c00afca01c331a447d86fbf21b166b640551fe04258b4acfc6a4
 
 build:
   number: 0
+  skip: True  # [py<38]
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
     - backend-test-tools = onnx.backend.test.cmd_tools:main
+  missing_dso_whitelist:  # [s390x]
+    - '$RPATH/ld64.so.1'  # [s390x]
 
 requirements:
   build:
-    - {{ compiler('c') }}                     
-    - {{ compiler('cxx') }}                   
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
-    - make                                    # [not win]
-    - libprotobuf
+    - make          # [not win]
+    - libprotobuf {{ libprotobuf }}
   host:
     - python
     - pip
     - setuptools
     - wheel
-    - pybind11 2.10.4
+    - pybind11 2.12.0
     # required >=3.20.2 but we have only 3.20.3 with python 3.11 support
     - protobuf 3.20.3
-    - libprotobuf
+    - libprotobuf {{ libprotobuf }}
     - pytest-runner 6.0.0
-    - numpy   1.19  # [py<310]
-    - numpy   1.21  # [py==310]
-    - numpy   1.23  # [py>=311]
+    - numpy   1.21  # [py<310]
+    - numpy   1.23  # [py==310 or py==311]
+    - numpy   1.26  # [py>=312]
   run:
     - python
     - protobuf >=3.20.2,<4
@@ -57,8 +60,8 @@ test:
 about:
   home: https://onnx.ai
   summary: Open Neural Network Exchange library
-  license: MIT
-  license_family: MIT
+  license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   description: |
     Open Neural Network Exchange (ONNX) is the first step toward an open
@@ -67,7 +70,7 @@ about:
     defines an extensible computation graph model, as well as definitions of
     built-in operators and standard data types. Initially we focus on the
     capabilities needed for inferencing (evaluation).
-  doc_url: https://github.com/onnx/onnx/blob/main/README.md
+  doc_url: https://onnx.ai/onnx/
   dev_url: https://github.com/onnx/onnx
 
 extra:
