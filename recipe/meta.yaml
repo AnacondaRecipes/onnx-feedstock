@@ -10,7 +10,7 @@ source:
   sha256: 0ce153e26ce2c00afca01c331a447d86fbf21b166b640551fe04258b4acfc6a4
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py<38]
   entry_points:
     - check-model = onnx.bin.checker:check_model
@@ -33,18 +33,21 @@ requirements:
     - wheel
     - pybind11 2.12.0
     # required >=3.20.2 but we have only 3.20.3 with python 3.11 support
-    - protobuf 3.20.3
+    - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
+    - libabseil {{ libabseil }}
     - pytest-runner 6.0.0
     - numpy   1.21  # [py<310]
     - numpy   1.23  # [py==310 or py==311]
     - numpy   1.26  # [py>=312]
   run:
     - python
-    - protobuf >=3.20.2,<4
-    - {{ pin_compatible('libprotobuf') }}
+    - protobuf >=3.20.2
     - {{ pin_compatible('numpy') }}
     - typing-extensions >=3.6.2.1
+    # through run_exports
+    - libprotobuf
+    - libabseil
 
 test:
   requires:
