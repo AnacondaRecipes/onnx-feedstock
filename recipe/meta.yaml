@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.16.0" %}
+{% set version = "1.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0ce153e26ce2c00afca01c331a447d86fbf21b166b640551fe04258b4acfc6a4
+  sha256: 8d5e983c36037003615e5a02d36b18fc286541bf52de1a78f6cf9f32005a820e
 
 build:
-  number: 1
+  number: 0
   skip: True  # [py<38]
   entry_points:
     - check-model = onnx.bin.checker:check_model
