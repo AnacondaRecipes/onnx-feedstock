@@ -42,7 +42,7 @@ requirements:
   run:
     - python
     - protobuf >=3.20.2
-    - numpy >=1.20,<2.3
+    - numpy >=1.20
     - typing-extensions >=3.6.2.1
     # through run_exports
     - libprotobuf
@@ -65,8 +65,6 @@ requirements:
 test:
   imports:
     - onnx
-  source_files:
-    - onnx/test
   requires:
     - pip
     # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
@@ -82,7 +80,7 @@ test:
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest -vv onnx/test {{ tests_to_ignore }} -k "not ({{ tests_to_skip }})"
+    - pytest --pyargs onnx {{ tests_to_ignore }} -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
