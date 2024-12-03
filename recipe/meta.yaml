@@ -52,7 +52,7 @@ test:
   imports:
     - onnx
   source_files:
-    - tests
+    - onnx/test
   requires:
     - pip
     - pytest
