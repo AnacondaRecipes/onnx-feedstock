@@ -58,15 +58,20 @@ test:
     - parameterized
     - pillow
     - pytest
-    - re2
+    # google-re2 is RE2 Python bindings but it's not available on defaults.
+    #- google-re2
   commands:
     - pip check
     - check-model --help
     - check-node --help
     - backend-test-tools --help
     # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
-        # --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
-    - pytest -vv onnx/test
+    # --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
+    # Skip test_regex_full_match because google-re2 isn't available
+    # Skip test_image_decoder_decode_jpeg_bgr_cpu and test_image_decoder_decode_jpeg_rgb_cpu
+    # because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
+    # see https://github.com/onnx/onnx/issues/4798
+    - pytest -vv onnx/test -k "not (test_regex_full_match or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu)"
 
 about:
   home: https://onnx.ai
