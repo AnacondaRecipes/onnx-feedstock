@@ -48,6 +48,17 @@ requirements:
     - libprotobuf
     - libabseil
 
+{% set tests_to_skip = "" %}
+# Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
+{% set tests_to_skip = tests_to_skip + "test_regex_full_match or test_regex_invalid_pattern" %}
+# Skip test_image_decoder_decode_jpeg_bgr_cpu, test_image_decoder_decode_jpeg_rgb_cpu, and test_image_decoder_decode_jpeg_grayscale_cpu
+# because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
+# see https://github.com/onnx/onnx/issues/4798
+{% set tests_to_skip = tests_to_skip + " or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu or test_image_decoder_decode_jpeg_grayscale_cpu" %}
+# helper tests (test_to_array_with_external_data, test_make_tensor_raw) fail on big endian
+{% set tests_to_skip = tests_to_skip + " or test_to_array_with_external_data or test_make_tensor_raw" %}  # [linux-s390x]
+
+
 test:
   imports:
     - onnx
@@ -55,7 +66,10 @@ test:
     - onnx/test
   requires:
     - pip
-    - parameterized
+    # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
+    # if parameterized <0.9.0, or ignore them:
+    # --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
+    - parameterized >=0.9.0
     - pillow
     - pytest
     # google-re2 is RE2 Python bindings but it's not available on defaults.
@@ -65,13 +79,7 @@ test:
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
-    # --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
-    # Skip test_regex_full_match because google-re2 isn't available
-    # Skip test_image_decoder_decode_jpeg_bgr_cpu and test_image_decoder_decode_jpeg_rgb_cpu
-    # because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
-    # see https://github.com/onnx/onnx/issues/4798
-    - pytest -vv onnx/test -k "not (test_regex_full_match or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu)"
+    - pytest -vv onnx/test -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
