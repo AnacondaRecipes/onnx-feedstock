@@ -37,28 +37,31 @@ requirements:
     - libprotobuf {{ libprotobuf }}
     - libabseil {{ libabseil }}
     - pytest-runner 6.0.0
-    - numpy   1.21  # [py<310]
-    - numpy   1.23  # [py==310 or py==311]
-    - numpy   1.26  # [py>=312]
+    - numpy 2.0 # [py<313]
+    - numpy 2.1 # [py==313]
   run:
     - python
     - protobuf >=3.20.2
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.20,<2.3
     - typing-extensions >=3.6.2.1
     # through run_exports
     - libprotobuf
     - libabseil
 
 test:
-  requires:
-    - pip
   imports:
     - onnx
+  source_files:
+    - tests
+  requires:
+    - pip
+    - pytest
   commands:
     - pip check
     - check-model --help
     - check-node --help
     - backend-test-tools --help
+    - pytest -vv tests
 
 about:
   home: https://onnx.ai
