@@ -59,8 +59,8 @@ requirements:
 # helper tests (test_to_array_with_external_data, test_make_tensor_raw) fail on big endian,
 # see https://github.com/onnx/onnx/issues/2992
 {% set tests_to_ignore = "" %}
-{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/helper_test.py" %}         # [linux-s390x]
-{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/test_external_data.py" %}  # [linux-s390x]
+{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/helper_test.py" %}         # [linux and s390x]
+{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/test_external_data.py" %}  # [linux and s390x]
 
 test:
   imports:
