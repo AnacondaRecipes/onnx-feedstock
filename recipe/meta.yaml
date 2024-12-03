@@ -61,7 +61,7 @@ test:
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest -vv tests
+    - pytest -vv onnx/test
 
 about:
   home: https://onnx.ai
