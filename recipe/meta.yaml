@@ -55,9 +55,12 @@ requirements:
 # because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
 # see https://github.com/onnx/onnx/issues/4798
 {% set tests_to_skip = tests_to_skip + " or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu or test_image_decoder_decode_jpeg_grayscale_cpu" %}
-# helper tests (test_to_array_with_external_data, test_make_tensor_raw) fail on big endian
-{% set tests_to_skip = tests_to_skip + " or test_to_array_with_external_data or test_make_tensor_raw" %}  # [linux-s390x]
 
+# helper tests (test_to_array_with_external_data, test_make_tensor_raw) fail on big endian,
+# see https://github.com/onnx/onnx/issues/2992
+{% set tests_to_ignore = "" %}
+{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/helper_test.py" %}         # [linux-s390x]
+{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/test_external_data.py" %}  # [linux-s390x]
 
 test:
   imports:
@@ -79,7 +82,7 @@ test:
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest -vv onnx/test -k "not ({{ tests_to_skip }})"
+    - pytest -vv onnx/test {{ tests_to_ignore }} -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
