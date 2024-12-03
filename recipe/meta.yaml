@@ -58,13 +58,15 @@ test:
     - parameterized
     - pillow
     - pytest
+    - re2
   commands:
     - pip check
     - check-model --help
     - check-node --help
     - backend-test-tools --help
     # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
-    - pytest -vv onnx/test --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
+        # --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
+    - pytest -vv onnx/test
 
 about:
   home: https://onnx.ai
