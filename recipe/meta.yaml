@@ -63,7 +63,8 @@ test:
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest -vv onnx/test
+    # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
+    - pytest -vv onnx/test --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
 
 about:
   home: https://onnx.ai
