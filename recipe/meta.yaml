@@ -55,6 +55,8 @@ test:
     - onnx/test
   requires:
     - pip
+    - parameterized
+    - pillow
     - pytest
   commands:
     - pip check
