@@ -58,9 +58,8 @@ requirements:
 
 # helper tests (test_to_array_with_external_data, test_make_tensor_raw) fail on big endian,
 # see https://github.com/onnx/onnx/issues/2992
-{% set tests_to_ignore = "" %}
-{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/helper_test.py" %}         # [linux and s390x]
-{% set tests_to_ignore = tests_to_ignore + " --ignore=onnx/test/test_external_data.py" %}  # [linux and s390x]
+{% set tests_to_skip = tests_to_skip + " or test_make_tensor_raw" %}         # [linux and s390x]
+{% set tests_to_skip = tests_to_skip + " or test_save_model_with_external_data_multiple_times or test_to_array_with_external_data" %}  # [linux and s390x]
 
 test:
   imports:
@@ -68,8 +67,7 @@ test:
   requires:
     - pip
     # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
-    # if parameterized <0.9.0, or ignore them:
-    # --ignore="onnx/test/data_propagation_test.py" --ignore="onnx/test/function_inference_test.py" --ignore="onnx/test/shape_inference_test.py"
+    # if parameterized <0.9.0:
     - parameterized >=0.9.0
     - pillow
     - pytest
@@ -80,7 +78,7 @@ test:
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest --pyargs onnx {{ tests_to_ignore }} -k "not ({{ tests_to_skip }})"
+    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
