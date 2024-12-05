@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.16.0" %}
+{% set version = "1.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0ce153e26ce2c00afca01c331a447d86fbf21b166b640551fe04258b4acfc6a4
+  sha256: 8d5e983c36037003615e5a02d36b18fc286541bf52de1a78f6cf9f32005a820e
 
 build:
-  number: 1
+  number: 0
   skip: True  # [py<38]
   entry_points:
     - check-model = onnx.bin.checker:check_model
@@ -37,28 +37,48 @@ requirements:
     - libprotobuf {{ libprotobuf }}
     - libabseil {{ libabseil }}
     - pytest-runner 6.0.0
-    - numpy   1.21  # [py<310]
-    - numpy   1.23  # [py==310 or py==311]
-    - numpy   1.26  # [py>=312]
+    - numpy 2.0 # [py<313]
+    - numpy 2.1 # [py==313]
   run:
     - python
     - protobuf >=3.20.2
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.20
     - typing-extensions >=3.6.2.1
     # through run_exports
     - libprotobuf
     - libabseil
 
+{% set tests_to_skip = "" %}
+# Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
+{% set tests_to_skip = tests_to_skip + "test_regex_full_match or test_regex_invalid_pattern" %}
+# Skip test_image_decoder_decode_jpeg_bgr_cpu, test_image_decoder_decode_jpeg_rgb_cpu, and test_image_decoder_decode_jpeg_grayscale_cpu
+# because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
+# see https://github.com/onnx/onnx/issues/4798
+{% set tests_to_skip = tests_to_skip + " or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu or test_image_decoder_decode_jpeg_grayscale_cpu" %}
+
+# helper tests (test_to_array_with_external_data, test_make_tensor_raw) fail on big endian,
+# see https://github.com/onnx/onnx/issues/2992
+{% set tests_to_skip = tests_to_skip + " or test_make_tensor_raw" %}         # [linux and s390x]
+{% set tests_to_skip = tests_to_skip + " or test_save_model_with_external_data_multiple_times or test_to_array_with_external_data" %}  # [linux and s390x]
+
 test:
-  requires:
-    - pip
   imports:
     - onnx
+  requires:
+    - pip
+    # Parameterized tests can raise "TypeError: Parameters must be tuples, but 1 is not (hint: use '(1, )')"
+    # if parameterized <0.9.0:
+    - parameterized >=0.9.0
+    - pillow
+    - pytest
+    # google-re2 is RE2 Python bindings but it's not available on defaults.
+    #- google-re2
   commands:
     - pip check
     - check-model --help
     - check-node --help
     - backend-test-tools --help
+    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
