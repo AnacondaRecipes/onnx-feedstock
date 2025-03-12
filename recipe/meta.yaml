@@ -31,7 +31,7 @@ requirements:
     - pip
     - setuptools
     - wheel
-    - pybind11 2.12.0
+    - pybind11 2.13.6
     # required >=3.20.2 but we have only 3.20.3 with python 3.11 support
     - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
