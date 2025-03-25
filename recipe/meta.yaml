@@ -12,6 +12,7 @@ source:
 build:
   number: 2
   skip: True  # [py<38]
+  skip: True  # [linux and s390x]
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
