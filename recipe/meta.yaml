@@ -10,8 +10,9 @@ source:
   sha256: 8d5e983c36037003615e5a02d36b18fc286541bf52de1a78f6cf9f32005a820e
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py<38]
+  skip: True  # [linux and s390x]
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -25,7 +26,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make          # [not win]
-    - libprotobuf {{ libprotobuf }}
+    - libprotobuf 5.29.3
   host:
     - python
     - pip
@@ -33,9 +34,9 @@ requirements:
     - wheel
     - pybind11 2.13.6
     # required >=3.20.2 but we have only 3.20.3 with python 3.11 support
-    - protobuf {{ libprotobuf }}
-    - libprotobuf {{ libprotobuf }}
-    - libabseil {{ libabseil }}
+    - protobuf 5.29.3
+    - libprotobuf 5.29.3
+    - libabseil 20250127.0
     - pytest-runner 6.0.0
     - numpy 2.0 # [py<313]
     - numpy 2.1 # [py==313]
