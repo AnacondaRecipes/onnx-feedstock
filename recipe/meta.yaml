@@ -10,7 +10,7 @@ source:
   sha256: b466af96fd8d9f485d1bb14f9bbdd2dfb8421bc5544583f014088fb941a1d21e
   patches:
     - patches/0001-Link-to-abseil_dll.patch  # [win]
-    - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch  # [win]
+    - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch
 
 build:
   number: 0
@@ -26,24 +26,27 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make          # [not win]
+    - make  # [unix]
     - libprotobuf 5.29.3
   host:
     - python
     - pip
-    - setuptools >=64
+    - setuptools >=64  # [py>39]
+    # PBP pipeline for some reason used version 72, and py39 failed with:
+    # AttributeError: 'PathDistribution' object has no attribute '_normalized_name'
+    - setuptools >=78  # [py<=39]
     - wheel
     - pybind11 2.13.6
     - protobuf 5.29.3
     - libprotobuf 5.29.3
     - libabseil 20250127.0
-    - pytest-runner 6.0.0
     - numpy 2.0 # [py<313]
     - numpy 2.1 # [py==313]
   run:
     - python
     - protobuf >=4.25.1
-    - numpy >=1.22
+    # Drop Python 3.8 support in favor of better NumPy compatibility
+    - numpy >=1.19
     - typing-extensions >=4.7.1
     # through run_exports
     - libprotobuf
@@ -69,13 +72,13 @@ test:
     - pytest
     # google-re2 is RE2 Python bindings but it's not available on defaults.
     #- google-re2
+    - ml_dtypes
   commands:
     - pip check
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest --pyargs onnx 
-    #-k "not ({{ tests_to_skip }})"
+    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
