@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.18.0" %}
+{% set version = "1.19.1rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b466af96fd8d9f485d1bb14f9bbdd2dfb8421bc5544583f014088fb941a1d21e
-  patches:
-    - patches/0001-Link-to-abseil_dll.patch  # [win]
-    - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch
+  sha256: b81c1b7e52321d8c05cf082c8772c8575242e9202417fd018e7532d5b8e5ef8c
 
 build:
   number: 0
@@ -36,7 +33,7 @@ requirements:
     # AttributeError: 'PathDistribution' object has no attribute '_normalized_name'
     - setuptools >=78  # [py<=39]
     - wheel
-    - pybind11 2.13.6
+    - nanobind 2.9.2
     - protobuf 5.29.3
     - libprotobuf 5.29.3
     - libabseil 20250127.0
