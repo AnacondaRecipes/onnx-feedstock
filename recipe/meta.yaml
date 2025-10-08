@@ -11,7 +11,7 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b81c1b7e52321d8c05cf082c8772c8575242e9202417fd018e7532d5b8e5ef8c
   patches:
-    - patches/0001-Link-to-abseil_dll.patch  # [win]
+    #- patches/0001-Link-to-abseil_dll.patch  # [win]
     - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch
 
 build:
