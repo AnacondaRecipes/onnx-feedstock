@@ -1,17 +1,14 @@
 {% set name = "onnx" %}
-{% set version = "1.19.1rc1" %}
+{% set version = "1.19.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  #url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  #sha256: 2c2ac5a078b0350a0723fac606be8cd9e9e8cbd4c99bab1bffe2623b188fd236
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b81c1b7e52321d8c05cf082c8772c8575242e9202417fd018e7532d5b8e5ef8c
   patches:
-    #- patches/0001-Link-to-abseil_dll.patch  # [win]
     - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch
 
 build:
@@ -20,7 +17,7 @@ build:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
     - backend-test-tools = onnx.backend.test.cmd_tools:main
-  skip: True  # [py<39]
+  skip: True  # [py<310]
 
 requirements:
   build:
@@ -50,6 +47,7 @@ requirements:
     # Drop Python 3.8 support in favor of better NumPy compatibility
     - numpy >=1.19
     - typing-extensions >=4.7.1
+    - ml_dtypes >=0.5.0
     # through run_exports
     - libprotobuf
     - libabseil
@@ -72,9 +70,6 @@ test:
     - parameterized >=0.9.0
     - pillow
     - pytest
-    # google-re2 is RE2 Python bindings but it's not available on defaults.
-    #- google-re2
-    - ml_dtypes
   commands:
     - pip check
     - check-model --help
