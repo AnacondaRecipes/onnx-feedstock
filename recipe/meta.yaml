@@ -1,16 +1,15 @@
 {% set name = "onnx" %}
-{% set version = "1.18.0" %}
+{% set version = "1.19.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b466af96fd8d9f485d1bb14f9bbdd2dfb8421bc5544583f014088fb941a1d21e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 737524d6eb3907d3499ea459c6f01c5a96278bb3a0f2ff8ae04786fb5d7f1ed5
   patches:
-    - patches/0001-Link-to-abseil_dll.patch  # [win]
-    - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch
+    - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
 
 build:
   number: 0
@@ -18,7 +17,7 @@ build:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
     - backend-test-tools = onnx.backend.test.cmd_tools:main
-  skip: True  # [py<39]
+  skip: True  # [py<310]
 
 requirements:
   build:
@@ -31,10 +30,8 @@ requirements:
   host:
     - python
     - pip
-    - setuptools >=64  # [py>39]
-    # PBP pipeline for some reason used version 72, and py39 failed with:
-    # AttributeError: 'PathDistribution' object has no attribute '_normalized_name'
-    - setuptools >=78  # [py<=39]
+    # for py313 numpy 2.1 needs setuptools less than 74
+    - setuptools <74
     - wheel
     - pybind11 2.13.6
     - protobuf 5.29.3
@@ -48,6 +45,7 @@ requirements:
     # Drop Python 3.8 support in favor of better NumPy compatibility
     - numpy >=1.19
     - typing-extensions >=4.7.1
+    - ml_dtypes >=0.5.0
     # through run_exports
     - libprotobuf
     - libabseil
@@ -70,15 +68,14 @@ test:
     - parameterized >=0.9.0
     - pillow
     - pytest
-    # google-re2 is RE2 Python bindings but it's not available on defaults.
-    #- google-re2
-    - ml_dtypes
   commands:
     - pip check
     - check-model --help
     - check-node --help
     - backend-test-tools --help
-    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"
+    # issue: https://github.com/onnx/onnx/issues/7376
+    # tests connected with ShapeInferenceError, TypeInferenceError broken on osx-arm64:
+    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"  # [not (osx and arm64)]
 
 about:
   home: https://onnx.ai
