@@ -30,7 +30,8 @@ requirements:
   host:
     - python
     - pip
-    - setuptools >=77
+    # for py313 numpy 2.1 needs setuptools less than 74
+    - setuptools <74
     - wheel
     - pybind11 2.13.6
     - protobuf 5.29.3
