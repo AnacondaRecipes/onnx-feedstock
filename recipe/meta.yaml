@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b81c1b7e52321d8c05cf082c8772c8575242e9202417fd018e7532d5b8e5ef8c
+  sha256: 737524d6eb3907d3499ea459c6f01c5a96278bb3a0f2ff8ae04786fb5d7f1ed5
   patches:
-    - patches/0002-dont-hide-all-symbols-and-set-ext-suffix.patch
+    - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
 
 build:
   number: 0
@@ -30,10 +30,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools >=64  # [py>39]
-    # PBP pipeline for some reason used version 72, and py39 failed with:
-    # AttributeError: 'PathDistribution' object has no attribute '_normalized_name'
-    - setuptools >=78  # [py<=39]
+    - setuptools >=77
     - wheel
     - pybind11 2.13.6
     - protobuf 5.29.3
