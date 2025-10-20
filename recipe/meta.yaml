@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 737524d6eb3907d3499ea459c6f01c5a96278bb3a0f2ff8ae04786fb5d7f1ed5
+  url: https://github.com/Andrii-Osipov/onnx/archive/refs/tags/1.91.1.main.tar.gz
+  sha256: fd23f07e1417d150cc68b5e51066b4c9952f2c6405ebbca65316e88cdeb39010
   patches:
     - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
 
