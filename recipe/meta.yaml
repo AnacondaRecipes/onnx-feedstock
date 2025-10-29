@@ -8,8 +8,9 @@ package:
 source:
   url: https://github.com/Andrii-Osipov/onnx/archive/refs/tags/2.tar.gz
   sha256: 11e380e9433f66c94a018307ced4de92bda709e5a14ea64486fb2435505fe373
-  #patches:
-  #  - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
+  patches:
+    #- patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
+    - patches/0001-fix-licnse.patch
 
 build:
   number: 1
