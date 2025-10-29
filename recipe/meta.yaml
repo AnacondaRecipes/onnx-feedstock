@@ -6,10 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/Andrii-Osipov/onnx/archive/refs/tags/1.91.1.main.tar.gz
-  sha256: fd23f07e1417d150cc68b5e51066b4c9952f2c6405ebbca65316e88cdeb39010
-  patches:
-    - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
+  url: https://github.com/Andrii-Osipov/onnx/archive/refs/tags/2.tar.gz
+  sha256: 11e380e9433f66c94a018307ced4de92bda709e5a14ea64486fb2435505fe373
+  #patches:
+  #  - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
 
 build:
   number: 1
