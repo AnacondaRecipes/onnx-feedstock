@@ -76,7 +76,7 @@ test:
     - backend-test-tools --help
     # issue: https://github.com/onnx/onnx/issues/7376
     # tests connected with ShapeInferenceError, TypeInferenceError broken on osx-arm64:
-    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"  # [not (osx and arm64)]
+    - pytest --pyargs onnx -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://onnx.ai
