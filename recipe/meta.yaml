@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.19.1" %}
+{% set version = "1.20.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 737524d6eb3907d3499ea459c6f01c5a96278bb3a0f2ff8ae04786fb5d7f1ed5
-  patches:
-    - patches/0001-dont-hide-all-symbols-and-set-ext-suffix.patch
+  sha256: ded16de1df563d51fbc1ad885f2a426f814039d8b5f4feb77febe09c0295ad67
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -26,19 +24,17 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make  # [unix]
-    - libprotobuf 6.33.0
+    - libprotobuf {{ libprotobuf }}
   host:
     - python
     - pip
-    # for py313 numpy 2.1 needs setuptools less than 74
-    - setuptools <74
+    - setuptools
     - wheel
     - pybind11 2.13.6
-    - protobuf 6.33.0
-    - libprotobuf 6.33.0
-    - libabseil 20250814.1
-    - numpy 2.0 # [py<313]
-    - numpy 2.1 # [py==313]
+    - protobuf {{ libprotobuf }}
+    - libprotobuf {{ libprotobuf }}
+    - libabseil {{ libabseil }}
+    - numpy {{ numpy }}
   run:
     - python
     - protobuf >=4.25.1
