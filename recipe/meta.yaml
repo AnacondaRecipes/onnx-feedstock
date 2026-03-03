@@ -25,12 +25,12 @@ requirements:
     - cmake
     - make  # [unix]
     - libprotobuf {{ libprotobuf }}
+    - git
   host:
     - python
     - pip
     - setuptools
     - wheel
-    - nanobind 2.5.0
     - pybind11 2.13.6
     - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
