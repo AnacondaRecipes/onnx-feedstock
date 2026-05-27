@@ -10,7 +10,7 @@ source:
   sha256: ded16de1df563d51fbc1ad885f2a426f814039d8b5f4feb77febe09c0295ad67
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
