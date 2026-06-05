@@ -1,5 +1,5 @@
 {% set name = "onnx" %}
-{% set version = "1.20.1" %}
+{% set version = "1.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ded16de1df563d51fbc1ad885f2a426f814039d8b5f4feb77febe09c0295ad67
+  sha256: 4d8b67d0aaec5864c87633188b91cc520877477ec0254eda122bef8be43cd764
+  patches:
+    - patches/0001-Patch-Python-and-nanobind-cmake-config.patch
+    - patches/0002-Link-protobuf-and-abseil-privately.patch
 
 build:
   number: 0
@@ -23,15 +26,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - ninja
     - make  # [unix]
     - libprotobuf {{ libprotobuf }}
-    - git
   host:
     - python
     - pip
-    - setuptools
+    - setuptools >=77
     - wheel
-    - pybind11 2.13.6
+    - nanobind
     - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
     - libabseil {{ libabseil }}
@@ -39,13 +42,14 @@ requirements:
   run:
     - python
     - protobuf >=4.25.1
-    # Drop Python 3.8 support in favor of better NumPy compatibility
-    - numpy >=1.19
+    - numpy >=1.23.2
     - typing-extensions >=4.7.1
     - ml_dtypes >=0.5.0
     # through run_exports
     - libprotobuf
     - libabseil
+  run_constrained:
+    - pillow  # [reference extra]
 
 {% set tests_to_skip = "" %}
 # Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
