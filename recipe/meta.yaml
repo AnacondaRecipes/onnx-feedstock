@@ -13,7 +13,7 @@ source:
     - patches/0002-Link-protobuf-and-abseil-privately.patch
 
 build:
-  number: 6
+  number: 0
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -51,7 +51,6 @@ requirements:
     - libabseil
   run_constrained:
     # upstream [reference] optional extra
-    - pillow
 
 {% set tests_to_skip = "" %}
 # Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
