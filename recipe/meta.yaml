@@ -13,7 +13,7 @@ source:
     - patches/0002-Link-protobuf-and-abseil-privately.patch
 
 build:
-  number: 4
+  number: 5
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -35,7 +35,7 @@ requirements:
     # upstream [build-system] requires setuptools>=77; pkgs/main satisfies
     - setuptools
     - wheel
-    - nanobind 2.12.0
+    - nanobind
     - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
     - libabseil {{ libabseil }}
