@@ -1,15 +1,8 @@
 {% set name = "onnx" %}
 {% set version = "1.22.0" %}
-{% set tests_to_skip = "" %}
-{% set tests_to_skip = tests_to_skip + "test_regex_full_match or test_regex_invalid_pattern" %}
-{% set tests_to_skip = tests_to_skip + " or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu or test_image_decoder_decode_jpeg_grayscale_cpu" %}
 
-# Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
-# Skip test_image_decoder_decode_jpeg_bgr_cpu, test_image_decoder_decode_jpeg_rgb_cpu, and test_image_decoder_decode_jpeg_grayscale_cpu
-# because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
-# see https://github.com/onnx/onnx/issues/4798
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -60,6 +53,12 @@ requirements:
   run_constrained:
     # upstream [reference] optional extra
 
+# Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
+{% set tests_to_skip = "test_regex_full_match or test_regex_invalid_pattern" %}
+# Skip test_image_decoder_decode_jpeg_bgr_cpu, test_image_decoder_decode_jpeg_rgb_cpu, and test_image_decoder_decode_jpeg_grayscale_cpu
+# because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
+# see https://github.com/onnx/onnx/issues/4798
+{% set tests_to_skip = tests_to_skip + " or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu or test_image_decoder_decode_jpeg_grayscale_cpu" %}
 test:
   imports:
     - onnx
