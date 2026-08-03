@@ -27,31 +27,25 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-    - make  # [unix]
     - libprotobuf {{ libprotobuf }}
   host:
     - python
     - pip
-    # upstream [build-system] requires setuptools>=77; pkgs/main satisfies
+    - scikit-build-core >=0.11
     - nanobind
     - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
     - libabseil {{ libabseil }}
     - numpy {{ numpy }}
-    - scikit-build-core >=0.11
-    - protobuf ==4.25.1
   run:
     - python
     - protobuf >=4.25.1
     - numpy >=1.23.2
-    - typing-extensions >=4.7.1
+    - typing-extensions >=4.15.0
     - ml_dtypes >=0.5.4
     # through run_exports
     - libprotobuf
     - libabseil
-    - typing_extensions >=4.15.0
-  run_constrained:
-    # upstream [reference] optional extra
 
 # Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
 {% set tests_to_skip = "test_regex_full_match or test_regex_invalid_pattern" %}
