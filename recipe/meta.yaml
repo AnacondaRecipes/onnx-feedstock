@@ -1,13 +1,13 @@
 {% set name = "onnx" %}
-{% set version = "1.21.0" %}
+{% set version = "1.22.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4d8b67d0aaec5864c87633188b91cc520877477ec0254eda122bef8be43cd764
+  sha256: ef40c0aaf0b643857ea9306fc7eddce17eaf9fb0407e4801f1fc5758443a38e0
   patches:
     - patches/0001-Patch-Python-and-nanobind-cmake-config.patch
     - patches/0002-Link-protobuf-and-abseil-privately.patch
@@ -27,14 +27,11 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-    - make  # [unix]
     - libprotobuf {{ libprotobuf }}
   host:
     - python
     - pip
-    # upstream [build-system] requires setuptools>=77; pkgs/main satisfies
-    - setuptools
-    - wheel
+    - scikit-build-core >=0.11
     - nanobind
     - protobuf {{ libprotobuf }}
     - libprotobuf {{ libprotobuf }}
@@ -44,22 +41,18 @@ requirements:
     - python
     - protobuf >=4.25.1
     - numpy >=1.23.2
-    - typing-extensions >=4.7.1
-    - ml_dtypes >=0.5.0
+    - typing-extensions >=4.15.0
+    - ml_dtypes >=0.5.4
     # through run_exports
     - libprotobuf
     - libabseil
-  run_constrained:
-    # upstream [reference] optional extra
 
-{% set tests_to_skip = "" %}
 # Skip test_regex_full_match and test_regex_invalid_pattern because google-re2 isn't available
-{% set tests_to_skip = tests_to_skip + "test_regex_full_match or test_regex_invalid_pattern" %}
+{% set tests_to_skip = "test_regex_full_match or test_regex_invalid_pattern" %}
 # Skip test_image_decoder_decode_jpeg_bgr_cpu, test_image_decoder_decode_jpeg_rgb_cpu, and test_image_decoder_decode_jpeg_grayscale_cpu
 # because of "AssertionError: Not equal to tolerance rtol=0.001, atol=1e-07",
 # see https://github.com/onnx/onnx/issues/4798
 {% set tests_to_skip = tests_to_skip + " or test_image_decoder_decode_jpeg_bgr_cpu or test_image_decoder_decode_jpeg_rgb_cpu or test_image_decoder_decode_jpeg_grayscale_cpu" %}
-
 test:
   imports:
     - onnx

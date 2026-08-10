@@ -4,7 +4,9 @@ set -euxo pipefail
 export ONNX_ML=1
 # build script looks at this, but not set on
 export CONDA_PREFIX="$PREFIX"
-export CMAKE_ARGS="${CMAKE_ARGS} -DBUILD_SHARED_LIBS=ON"
+export CMAKE_BUILD_PARALLEL_LEVEL="${CPU_COUNT}"
+export CMAKE_GENERATOR="Ninja"
+export CMAKE_ARGS="${CMAKE_ARGS}"
 if [[ ${CONDA_BUILD_CROSS_COMPILATION:-} == "1" ]]; then
     export CMAKE_ARGS="${CMAKE_ARGS} -DProtobuf_PROTOC_EXECUTABLE=$BUILD_PREFIX/bin/protoc"
 else
@@ -23,4 +25,13 @@ if [[ "${target_platform}" == osx-64 ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 $PYTHON -m pip install --no-deps --ignore-installed --no-build-isolation --verbose .
+
+# The wheel build sets ONNX_INSTALL=OFF, so reconfigure the project
+# to build and install the C++ libraries and CMake package files.
+cmake -S . -B .setuptools-cmake-build ${CMAKE_ARGS} \
+    -DONNX_BUILD_PYTHON=OFF \
+    -DBUILD_SHARED_LIBS=ON \
+    -DONNX_INSTALL=ON
+
+cmake --build .setuptools-cmake-build
 cmake --install .setuptools-cmake-build
