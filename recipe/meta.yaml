@@ -13,7 +13,7 @@ source:
     - patches/0002-Link-protobuf-and-abseil-privately.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - check-model = onnx.bin.checker:check_model
     - check-node = onnx.bin.checker:check_node
@@ -27,15 +27,15 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-    - libprotobuf {{ libprotobuf }}
+    - libprotobuf 7.35.1
   host:
     - python
     - pip
     - scikit-build-core >=0.11
     - nanobind
-    - protobuf {{ libprotobuf }}
-    - libprotobuf {{ libprotobuf }}
-    - libabseil {{ libabseil }}
+    - protobuf 7.35.1
+    - libprotobuf 7.35.1
+    - libabseil 20260526.0
     - numpy {{ numpy }}
   run:
     - python
